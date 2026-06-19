@@ -101,7 +101,7 @@ wheels = [
 ]
 
 [[package]]
-name = "putny-mit-technology-camp"
+name = "machine-learning-camp"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

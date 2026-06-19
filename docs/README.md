@@ -1,4 +1,4 @@
-# Putney MIT Technology Camp
+# Machine Learning Camp
 This repository contains an interactive curriculum for teaching programming and machine learning to high schoolers. 
 
 # Table of Contents
