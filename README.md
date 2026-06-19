@@ -29,7 +29,7 @@ uv sync
 The jupyter notebooks in this repository are meant to run in Google Colab. Write notebooks in Google Colab's editor. 
 
 - **Checking in to source control**:  
-  - In order to preserve changes to the notebooks in source control click the File > Download > `.ipynb` button
+  - In order to preserve changes to the notebooks in source control in the Colab editor click the File > Download > `.ipynb` button
   - Then copy the file into the [`notebooks/`](./notebooks) directory
   - By default notebook files are not suitable to check in to source control. To format and clean notebook files run:
     ``` shell
