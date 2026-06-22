@@ -1,0 +1,2 @@
+- [[plant-growing.jpg]]: https://stonybrook.digication.com/nina_zeng
+- [[mse.webp]]: https://www.geeksforgeeks.org/maths/mean-squared-error/
