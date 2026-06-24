@@ -15,14 +15,14 @@ Expectations going in to these lessons:
 All these lessons are completed online using a website named Google Colab. Complete each lesson in order. Start a lesson by clicking the "Open in Colab" button:
 
 1. **Website Basics**  
-   [![Open In                                                                              Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research  .google.com/github/catvec/machine-learning-camp/blob/main/notebooks/Website_Basics.ipynb)  
+   [![Open In                                                                              Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/catvec/machine-learning-camp/blob/main/notebooks/Website_Basics.ipynb)  
    Learn how to create websites using HTML and CSS.
 2. **Python Basics**  
-   [![Open In                                                                              Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research  .google.com/github/catvec/machine-learning-camp/blob/main/notebooks/Python_Basics.ipynb)  
+   [![Open In                                                                              Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/catvec/machine-learning-camp/blob/main/notebooks/Python_Basics.ipynb)  
    Learn how to program in Python (no prior experience required).
 3. **Data Modeling**  
-   [![Open In                                                                              Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research  .google.com/github/catvec/machine-learning-camp/blob/main/notebooks/Data_Modeling.ipynb)  
+   [![Open In                                                                              Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/catvec/machine-learning-camp/blob/main/notebooks/Data_Modeling.ipynb)  
    Learn how to use math to predict values.
 4. **Neural Networks**  
-   [![Open In                                                                              Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research  .google.com/github/catvec/machine-learning-camp/blob/main/notebooks/Neural_Networks.ipynb)  
+   [![Open In                                                                              Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/catvec/machine-learning-camp/blob/main/notebooks/Neural_Networks.ipynb)  
    Learn what a neural network is, how to make your own, and how to train it.
