@@ -42,3 +42,8 @@ The jupyter notebooks in this repository are meant to run in Google Colab. Write
   - Add the image URL to the `IMAGE_CREDITS.md` file in the assets folder
   - Then commit and push the image to GitHub
   - Get the raw URL for the image, it should be something like: `https://github.com/catvec/machine-learning-camp/blob/main/assets/what-is-ai/7-layer-neural-network.png?raw=true`
+- **Add your notebook to the student resources site:**  
+  - After you have created your notebook add it to the [`docs/index.md`](./docs/index.md) file
+  - This file is used as the source for the student resources site
+  - Add your notebook in the relevant place in the sequence of lessons
+  - Copy existing bullet point format
