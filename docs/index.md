@@ -1,4 +1,3 @@
-# Overview
 Welcome to the machine learning course. These lessons will teach you:
 
 - How to make a website
@@ -6,6 +5,11 @@ Welcome to the machine learning course. These lessons will teach you:
 - How to use math to predict values based on data
 - What a neural network is
 - How to train a neural network
+
+Expectations going in to these lessons:
+
+- No prior programming or machine learning experience
+- Familiar with algebra (Like $y = m \cdot x + b$)
 
 # Getting Started
 All these lessons are completed online using a website named Google Colab. Complete each lesson in order. Start a lesson by clicking the "Open in Colab" button:
