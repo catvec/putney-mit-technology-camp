@@ -23,5 +23,6 @@ The [`notebooks/`](../notebooks) directory contains several Jupyter notebooks wh
   - Backwards propagation
 - [`Neural_Networks.ipynb`](../notebooks/Neural_Networks.ipynb): The basics of AI:
   - Neural Networks
+- [`Image_Classifier.ipynb`](../notebooks/Image_Classifier.ipynb): Train an image classifier
 
 
