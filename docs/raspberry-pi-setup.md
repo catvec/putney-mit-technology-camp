@@ -3,8 +3,8 @@ This guide will help you set up your Raspberry Pi by:
 
 1. [Initial Raspberry Pi Setup](#initial-raspberry-pi-setup)
 1. [Connecting to the WiFi](#connect-to-the-wifi)
-2. Install the camera on the Raspberry Pi
-3. Install the BrainCraft Hat on the Raspberry Pi
+2. [Install the Camera on the Raspberry Pi](#install-the-camera-on-the-raspberry-pi)
+3. [Install the BrainCraft Hat on the Raspberry Pi](#install-the-braincraft-hat-on-the-raspberry-pi)
 4. Running your machine learning model on the Raspberry Pi
 
 # Materials
@@ -28,11 +28,13 @@ Before we begin you need to get your Raspberry Pi ready and turn it on:
    _([Image credits](https://researchparent.com/raspberry-pi-computer-building-for-kids/))_
   - Flip your Raspberry Pi over so it is upside-down
   - There should be a metal rectangle on the edge of the board, this is the SD card port
-  - Take your SD card (being careful to avoid touching the gold parts on the end) and flip it so the gold contact are facing the Raspberry Pi 
+  - Pick up your SD card (being careful to avoid touching the gold parts on the end)
+  - Flip it so the gold contacts are facing the Raspberry Pi 
   - Insert the SD card into the SD card port
+  - Gently nudge the SD card into the port to make sure it is secure
 2. Plug the Raspberry Pi in to power  
   ![Image of Raspberry Pi power port](./public/raspberry-pi-setup/power-port.jpg)  
-  - Plug the USB C power cable you have in to the power indicated by the red arrow in the photo above
+  - Plug the USB C power cable you have in to the power port indicated by the red arrow in the photo above
   - The red and green LEDs next to the port should turn on and flash every once and a while
 
 # Connect to the Wifi
@@ -48,7 +50,7 @@ The first thing we need to do is connect to the Wifi. To do this we need to talk
     - Scroll down to the "How to get it" section on the website
     - Click the button for your platforms app store 
     - Install the app
-2. Make sure your Raspberry Pi is on
+2. Make sure your Raspberry Pi is turned on
 3. Take an Ethernet cord and plug it into your Raspberry Pi and your computer  
    - Be sure the cord is firmly plugged in to both devices!
      - You should hear a click when you plug it in
@@ -56,17 +58,15 @@ The first thing we need to do is connect to the Wifi. To do this we need to talk
 4. Wait 2 minutes. The Raspberry Pi has to turn on and get ready
 5. Open your remote desktop viewer program (either TigerVNC or MultiVNC)
   - Enter `raspberrypi.local` as the address of the device you wish to connect to
-  - When prompted enter:
-    | Username | Password   |
-    | -------- | ---------- |
-    | `pi`     | `password` |
+  - The username is `pi`
+  - The password is `password`
   - You should now see a desktop with a few icons:
     ![Screenshot of what the Raspberry Pi will look like when you connect](./public/raspberry-pi-setup/vnc-success-login.png)
   - In the top right of your screen there should be one of these symbols:  
     ![The wifi symbol](./public/raspberry-pi-setup/wifi-symbol.png)  
     ![The ethernet symbol](./public/raspberry-pi-setup/ethernet-symbol.png)
     - Click the symbol
-      - If you do not see this symbol then these [Raspberry Pi Connect to Wifi Via Terminal](./raspberry-pi-connect-to-wifi-via-terminal.md) instructions  
+      - If you do not see this symbol then follow these [Raspberry Pi Connect to Wifi Via Terminal](./raspberry-pi-connect-to-wifi-via-terminal.md) instructions  
         **Only follow these if you do not see the indicated symbol**
     - Then connect to the Wifi
     - Click the browser icon in the top left of the screen  
@@ -82,119 +82,41 @@ The first thing we need to do is connect to the Wifi. To do this we need to talk
   - You should see an IP address (a series of numbers separated by dots)  
     ![Image of terminal with IP address](./public/raspberry-pi-setup/hostname-i.png)
   - Write this IP address down somewhere, share it with your teammates as well
-  - Any time you see `<IP>` in instructions further down replace that text with your Raspberry Pi's IP address
+  - Any time you see the text: `<IP>` in instructions replace that text with your Raspberry Pi's IP address
 7. Disconnect from the Raspberry Pi in your remote desktop viewer program
-8. Reconnect to your Raspberry Pi but this time use the `<IP>` you found
+8. Disconnect the ethernet cable from your computer and the Raspberry Pi
+9. Make sure your computer is connected to the same Wifi network that you connected your Raspberry Pi to (Make sure your computer has internet acess on this Wifi network)
+10. Reconnect to your Raspberry Pi but this time use the `<IP>` you found
+  - It should work the same as before
+  - Now that both your computer and the Raspberry Pi are on the same Wifi you can access it using the `<IP>` instead of needing an Ethernet cable 
 
-## 2. Setting up a Network Between your Computer and a Raspberry PI
-
-_Goal: In this section we are installing an operating system on our Raspberry Pi, connecting to our internet network, and making sure that our laptop can easily communicate with the Raspberry Pi._
-
-**Required Equipment:**
-
-- Computer
-- MicroSD card 16GB
-- Adaptor for microSD to your computer (usb-C port)
-- [Raspberry Pi 4](https://www.adafruit.com/product/4296)
-
-### 2.1 Installing an Operating System on your Raspberry PI
-
-- Take your SD card out of the package, or use one that you have close by but make sure that it’s empty because we’re going to completely overwrite it. Connect your SD card to your computer using your microSD adapter for USB-C (if you’re using a newer Mac).
-- Visit [this link](https://www.raspberrypi.org/software/) and click on the “Download for MacOs” buttond and go through the steps to install on your computer. If the install is successful you should be able to see this:
-  ![alt_text](images/welcome.png)
-- Choose Raspberry Pi 4
-- Choose the recommended operating system.
-- To make sure that you are mounting the image of this operating system on the SD Card(not your computer), plug and unplug the SD card so that you can see it appear and disappear on the storage section of the Raspberry Pi Imager. That way you’ll make sure that you are installing the operating system in the correct place.
-- Click Next and then click edit settings
-  ![alt_text](images/os-customisation-prompt.png)
-
-- Choose the options as detailed in the screenshot below. Note, you should choose your own username and password. **Make sure you record your username and password down!**
-  - For "hostname" put your team name
-  - Put `National Geographic Hackathon` for the Wifi name
-  - Put `boston2024` for the Wifi password
-
-  ![alt_text](images/image19.png)
-
-- Then, make sure SSH is enabled like below. Secure SHell (SSH) protocol allows us to access the terminal of a Raspberry Pi remotely from our computer on the same network.
-
-  ![alt text](images/os-customisation-services.png)
-
-- Click “SAVE” - this will install the latest operating system on your SD card.
-
-- Ensure your Raspberry Pi is unplugged, then remove the SD card from your laptop and put it in your Raspberry Pi
-- Plug the power in to your Raspberry Pi, wait about 30 seconds for it to turn on
-
-### 2.2 Connecting to your Raspberry Pi (and your Raspberry Pi to the Internet)
-
-1. Tell Noah and Joe what you named your Raspberry Pi in the last step, they will then tell you what your Raspberry Pi's IP address is. Write this down as we'll be using this later on in the tutorial
-   > An IP address is like a street address for your Raspberry Pi, but in the computer world instead of the real world
-2. Use SSH to access the terminal of your Raspberry Pi, be sure to replace `<IP address>` with the IP Noah or Joe gave you
-  ```bash
-  ssh username@<IP address>
-  ```
-3. Say "yes" and connect to the pi using the password you set earlier
-
-### 2.3 Update/Upgrade
-1. Now that you are logged in, perform an update/update:
-```bash
-sudo apt update
-sudo apt -y upgrade
-```
-and
-```bash
-sudo apt install --upgrade python3-setuptools
-```
-
-### 2.4 Setup Virtual Environment
-Starting with the October 10, 2023 Bookworm release of the Raspberry Pi OS, the use of Python Virtual Environments (venv) when pip installing packages is required. A Python Virtual Environment is an isolated space where you can work on your project, separately from your system-installed Python packages. You can read more on Python Virtual Environments [here](https://learn.adafruit.com/python-virtual-environment-usage-on-raspberry-pi).
-
-1. To Install and activate the virtual environment, use the following commands:
-```bash
-sudo apt install python3.11-venv
-python -m venv env --system-site-packages
-```
-2. Activate the virtual environment:
-```bash
-source env/bin/activate
-```
-OK you've now got a nice, clean, connected, and up-to-date Pi!
-
-### 2.5 Seeing and Controlling your Raspberry Pi’s Desktop through your Laptop (Optional)
-
-Sometimes it is not convenient to physically work with a device. Virtual Network Computing (VNC) allows you to control the desktop of one device from another. VNC relies upon a client and a server. The client runs on a device you can physically interact with, such as a personal laptop, desktop, tablet, or phone. The server runs on your Raspberry Pi. When you use VNC, the client transmits keyboard and mouse events to the server. The server executes those events on your Raspberry Pi, and returns screen updates to the client.
-
-The VNC client displays the desktop of your Raspberry Pi in a window. You can interact with the desktop as though you were working on the Raspberry Pi itself.
-
-First, you have to enable the VNC server by opening raspi-config with the following line.
-
-```bash
-sudo raspi-config
-```
-
-A pop-up will appear → navigate to “Interface Options” → select “VNC” and press Enter → under **Would you like the VNC Server to be enabled?** select “Yes” and press Enter → navigate down and select “Finish”.
-
-Now we enabled VNC on our Raspberry Pi, you can connect to the VNC server by [following these instructions](https://www.raspberrypi.com/documentation/computers/remote-access.html#connect-to-a-vnc-server).
-
-## 3. Braincraft HAT and Camera Hardware Install
-
+# Install the Camera on the Raspberry Pi
 Before plugging in or unplugging anything always ensure your Raspberry Pi is off and disconnected from power.
 
-### Connect the Fan
-
-Carefully position your Braincraft HAT screen side down. Take your fan from its packaging and connect the wires into the small connector that says FAN: P4. The Red wire should face the large black plastic connector. Once this is connected, take off the orange hole protector stickers from the board and position your fan on the middle of the board aligning the holes. Position the wire so it is not pinched under the fan, and carefully attach the screws firmly, but not too tight. You should be using the screws that _do not_ come with the small nuts (don’t use the nuts).
-![alt_text](images/image8.jpg)
-
-### Connect the Camera:
-
-![alt_text](images/image16.png)
-![alt_text](images/image9.gif)
+![Diagram showing where camera should be connected to the Raspberry Pi](./public/raspberry-pi-setup/camera-module-port.png)
+![Animation showing how to connect camera cable](./public/raspberry-pi-setup/connect-camera.gif)
 
 1. Ensure Pi is turned off
 2. Locate the Camera Module port
 3. Gently pull up on the edges of the port’s plastic clip
-4. Insert the Camera Module ribbon cable through the Braincraft HAT camera cable slit and then into the port; make sure the blue side of the cable is facing the ethernet ports.
+4. Insert the Camera Module ribbon cable through the Braincraft HAT camera cable slit and then into the port; make sure the blue side of the cable is facing the ethernet ports
 5. Push the black plastic clip back into place firmly, but make sure you’re pressing it down vertically. This part is tricky so be careful!
-6. Place the Camera board into the protective plastic case.
+
+# Install the BrainCraft Hat on the Raspberry Pi
+Before plugging in or unplugging anything always ensure your Raspberry Pi is off and disconnected from power.
+
+## Connect the Fan
+1. Carefully position your Braincraft HAT screen side down
+2. Take your fan from its packaging and connect the wires into the small connector that says FAN: P4
+3. The Red wire should face the large black plastic connector
+4. Once this is connected, take off the orange hole protector stickers from the board and position your fan on the middle of the board aligning the holes
+5. Position the wire so it is not pinched under the fan, and carefully attach the screws firmly, but not too tight
+6. You should be using the screws that _do not_ come with the small nuts (don’t use the nuts)
+7. Now your fan should be installed and look like this:  
+   ![Image of Braincraft HAT with fan installed](./public/raspberry-pi-setup/braincraft-hat-with-fan.jpg)
+
+### Connect the Camera:
+
 
 #### Attach the Braincraft HAT
 
