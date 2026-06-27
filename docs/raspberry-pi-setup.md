@@ -1,4 +1,3 @@
-# Raspberry Pi Setup
 This guide will help you set up your Raspberry Pi by:
 
 1. [Initial Raspberry Pi Setup](#initial-raspberry-pi-setup)

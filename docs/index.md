@@ -11,7 +11,7 @@ Expectations going in to these lessons:
 - No prior programming or machine learning experience
 - Familiar with algebra (Like y = mx + b)
 
-# Getting Started
+# Labs
 All these lessons are completed online using a website named Google Colab. Complete each lesson in order. Start a lesson by clicking the "Open in Colab" button:
 
 1. **Website Basics**  
@@ -39,3 +39,6 @@ All these lessons are completed online using a website named Google Colab. Compl
      <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/>
    </a>  
    Create and train your own neural network which determines what object is in a photo.
+
+# Hardware Lab
+The final lab involves setting up a neural network on a device called a Raspberry Pi: [Raspberry Pi Setup](./raspberry-pi-setup)

@@ -1,4 +1,3 @@
-# Raspberry Pi Connect to Wifi Via Terminal
 If you do not see either of these symbols in the top right of your Raspberry Pi's screen:
 
 ![The wifi symbol](./public/raspberry-pi-setup/wifi-symbol.png)  
