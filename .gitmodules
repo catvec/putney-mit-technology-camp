@@ -1,0 +1,3 @@
+[submodule "raspberry-pi/files/display-driver-install/Raspberry-Pi-Installer-Scripts"]
+	path = raspberry-pi/files/display-driver-install/Raspberry-Pi-Installer-Scripts
+	url = https://github.com/adafruit/Raspberry-Pi-Installer-Scripts.git

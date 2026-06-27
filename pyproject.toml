@@ -11,4 +11,5 @@ dependencies = [
 [tool.uv.workspace]
 members = [
     "raspberry-pi/files/notebooks",
+    "raspberry-pi/files/display-driver-install",
 ]

@@ -135,7 +135,27 @@ Access methods:
       chmod +x ~/Documents/notebooks/notebook-server.sh
       sudo systemctl enable --now jupyterlab
       ```
-
+  - Install Braincraft HAT display driver:
+    - Copy the files to the Raspberry Pi
+      (Run on your computer)
+      ```bash
+      rsync -r ./files/display-driver-install/ pi@$PI_IP:/home/pi/Downloads/display-driver-install
+      ```
+    - Install the driver and cleanup
+      (Run on the Raspberry Pi)
+      ```bash
+      cd ~/Downloads/display-driver-install
+      uv sync
+      chmod +x ./install.sh
+      ./install.sh
+      ```
+      When the script asks you if you want to reboot answer `y`
+    - Then go and clean up the installer:
+      (Run on the Raspberry Pi)
+      ```bash
+      sudo rm -rf ~/Downloads/display-driver-install
+      ```
+  
 # Troubleshooting
 - On linux if keeps disconnecting set Network Manager
   - IPv4 disabled

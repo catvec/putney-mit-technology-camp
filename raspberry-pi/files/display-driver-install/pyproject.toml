@@ -1,0 +1,10 @@
+[project]
+name = "display-driver-install"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "adafruit-python-shell>=1.14.0",
+    "click>=8.4.2",
+]
