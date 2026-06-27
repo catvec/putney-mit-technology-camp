@@ -10,19 +10,19 @@ After finishing students should be able to connect to their Raspberry Pi using t
 - **Username:** `pi`
 - **Password:** `password`
 
-Access:
+Services:
 
-- Ethernet SSH:
-  ```bash
-  ssh pi@raspberrypi.local
-  ```
-- WiFi SSH:
-  ```bash
-  ssh pi@$PI_IP
-  ```
-- Web shell: `$PI_IP:7681` in your web browser
+- Ethernet (port `22`)
+- TTYD HTTP terminal (port `7681`)
   - Use the `rz` command to send files from your browser to the Raspberry Pi
   - Use the `sz` command to download files from your Raspberry Pi to your browser
+- VNC (port `5900`)
+- Jupyter Lab (port `8999`)
+
+Access methods:
+
+- Direct connect (Ethernet) on the `raspberrypi.local` domain
+- Over the device's IP on Wifi
 
 # Setup ISO
 - In RPI imager
@@ -56,6 +56,19 @@ Access:
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
+  - Install Avahi service configuration files
+    - Copy the files to the Raspberry Pi  
+      (Run on your computer)
+      ```bash
+      rsync -r ./files/avahi-services pi@$PI_IP:/home/pi/Downloads
+      ```
+    - Install the files  
+      (Run on the Raspberry Pi)  
+      ```bash
+      sudo mv ~/Downloads/avahi-services/*.service /etc/avahi/services/
+      sudo systemctl restart avahi-daemon
+      rm -rf ~/Downloads/avahi-services
+      ```
   - Install [ttyd](https://github.com/tsl0922/ttyd) (web terminal)
     - Download:
       ```bash
@@ -103,30 +116,6 @@ Access:
 
           sudo apt install -y trzsz
           ```
-      - Add an Avahi service config file for ttyd
-        - Copy the file to the Raspberry Pi  
-          (Run on your computer)
-          ```bash
-          rsync ./files/ttyd-avahi.service pi@$PI_IP:/home/pi/Downloads
-          ```
-        - Install the file in the correct location  
-          (Run on the Raspberry Pi)  
-          ```bash
-          sudo mv ~/Downloads/ttyd-avahi.service /etc/avahi/services/ttyd.service
-          sudo systemctl restart avahi-daemon
-          ```
-  - Setup Avahi service for screen sharing
-    - Copy the file onto the Raspberry Pi
-      (Run on your computer)
-      ```bash
-      rsync ./files/vnc-avahi.service pi@$PI_IP:/home/pi/Downloads
-      ```
-    - Install the file in the correct location  
-      (Run on the Raspberry PI)
-      ```bash
-      sudo mv ~/Downloads/vnc-avahi.service /etc/avahi/services/vnc.service
-      sudo systemctl restart avahi-daemon
-      ```
   - Setup Jupyter Lab
     - Copy [`files/notebooks/`](./files/notebooks/) to `~/Documents/notebooks` on the Raspberry Pi:  
       (Run on your computer)
