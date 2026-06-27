@@ -1,3 +1,5 @@
+# Raspberry Pi Setup
+
 This guide will help you set up your Raspberry Pi by:
 
 1. [Initial Raspberry Pi Setup](#initial-raspberry-pi-setup)
@@ -92,14 +94,16 @@ The first thing we need to do is connect to the Wifi. To do this we need to talk
 # Install the Camera on the Raspberry Pi
 Before plugging in or unplugging anything always ensure your Raspberry Pi is off and disconnected from power.
 
-![Diagram showing where camera should be connected to the Raspberry Pi](./public/raspberry-pi-setup/camera-module-port.png)
-![Animation showing how to connect camera cable](./public/raspberry-pi-setup/connect-camera.gif)
-
 1. Ensure Pi is turned off
-2. Locate the Camera Module port
-3. Gently pull up on the edges of the port’s plastic clip
-4. Insert the Camera Module ribbon cable through the Braincraft HAT camera cable slit and then into the port; make sure the blue side of the cable is facing the ethernet ports
-5. Push the black plastic clip back into place firmly, but make sure you’re pressing it down vertically. This part is tricky so be careful!
+2. Locate the Camera Module port  
+   ![Diagram showing where camera should be connected to the Raspberry Pi](./public/raspberry-pi-setup/camera-module-port.png)
+3. Connect the camera cable  
+   ![Animation showing how to connect camera cable](./public/raspberry-pi-setup/connect-camera.gif)
+  - Gently pull up on the edges of the port’s plastic clip
+  - Insert the Camera Module ribbon cable through the Braincraft HAT camera cable slit and then into the port
+    ![Image of braincraft hat camera cable slot](./public/raspberry-pi-setup/braincraft-camera-cable-slot.jpg)  
+    - Make sure the blue side of the cable is facing the ethernet ports
+  - Push the black plastic clip back into place firmly, but make sure you’re pressing it down vertically. This part is tricky so be careful!
 
 # Install the BrainCraft Hat on the Raspberry Pi
 Before plugging in or unplugging anything always ensure your Raspberry Pi is off and disconnected from power.
