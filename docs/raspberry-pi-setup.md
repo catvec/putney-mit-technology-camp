@@ -212,6 +212,8 @@ Now that we have attached the Braincraft HAT to our Raspberry Pi we have a very 
 
 It may work fine for viewing the camera, but if you use your remote desktop viewer program you'll see that this screen is too small to use.
 
+![Screen is way too small](./public/raspberry-pi-setup/super-small-display-vnc.png)
+
 To fix this we can make a second display which we can only see using our remote desktop viewer program:
 
 1. Open `http://<IP>:7681` in your browser, this is a terminal where you can run commands on your Raspberry Pi
