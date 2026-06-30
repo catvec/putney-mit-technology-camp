@@ -75,13 +75,24 @@ The first thing we need to do is connect to the Wifi. To do this we need to talk
     - Ensure you have internet access by going to a website in the browser
   - Change the name of your Raspberry pi  
     - The new name of your Raspberry Pi will be `raspberrypi-group<n>` where `<n>` is your group number (For example if you are in group 3 your new Raspberry Pi name is `raspberrypi-group3`)  
-    - Open the terminal  
-      ![Terminal symbol](./public/raspberry-pi-setup/terminal-symbol.png)
-    - Type the following command into the terminal, replace `<new name>` with the new name from the previous step
-      ```bash
-      sudo echo "<new name>" > /etc/hostname
+    - Click the Raspberry icon in the top left to open the home menu:  
+      ![Raspberry symbol](./public/raspberry-pi-setup/home-menu-symbol.png)
+    - Then hover over the "Preferences" menu and click on "Control Centre"  
+      ![Preferences control center menu](./public/raspberry-pi-setup/preferences-control-center.png)  
+      It may take a moment to load
+    - On the left of the settings window that pops up click on the "System" section (you may have to scroll or use the arrows at the bottom of the window to find this section), then click on the "Change Hostname" button:  
+      ![Change hostname button](./public/raspberry-pi-setup/system-change-hostname.png)
+    - In the window that pops up enter your new hostname:  
+      ![Change hostname popup](./public/raspberry-pi-setup/change-hostname-popup.png)  
+      **Be sure to enter __your team's__ hostname here**  
       ```
-      You can use the arrow keys to move the cursor in the terminal.
+      raspberrypi-group<n>
+      ```
+      Where `<n>` is your group number.  
+      Then click "OK".
+    - Click the close button in the settings app (in the bottom right)
+    - A menu will then show asking if you want to reboot, select yes
+    - Wait for the Raspberry Pi to reboot
 6. Get the IP of your raspberry pi
   - Open a terminal  
     ![Terminal symbol](./public/raspberry-pi-setup/terminal-symbol.png)
