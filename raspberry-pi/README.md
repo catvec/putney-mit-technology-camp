@@ -52,6 +52,20 @@ Access methods:
     sudo apt-get update -y
     sudo apt-get upgrade -y
     ```
+  - Set the GPU memory higher:
+    - Copy the files to the Raspberry Pi  
+      (Run on your computer) 
+      ```bash
+      rsync ./files/config.txt pi@$PI_IP:/home/pi/Downloads
+      ```
+    - Move the file to the correct place  
+      (Run on the Raspberry Pi)
+      ```bash
+      sudo mv ~/Downloads/config.txt /boot/firmware/config.txt
+      ```
+      You may get a message about failing to preserve ownership, this is fine, ignore this error.
+      
+      After you run this command you will need to reboot at some point for it to take effect, but steps later on have you do this.
   - Install uv:
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
