@@ -152,7 +152,7 @@ Access methods:
       (Run on the Raspberry Pi)
       ```bash
       cd ~/Documents/notebooks
-      sudo apt-get install -y libcap-dev libcamera-dev
+      sudo apt-get install -y libcap-dev libcamera-dev python3-opencv
       uv venv --python /usr/bin/python3 --system-site-packages
       uv sync
       ```      
