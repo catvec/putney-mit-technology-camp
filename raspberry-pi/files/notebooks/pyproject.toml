@@ -7,5 +7,11 @@ requires-python = ">=3.13"
 dependencies = [
     "jupyter-collaboration>=4.4.1",
     "jupyterlab>=4.6.0",
+    "matplotlib>=3.11.0",
+    "numpy>=2.5.0",
+    "pandas>=3.0.3",
     "picamera2>=0.3.36",
+    "pillow>=12.2.0",
+    "torch>=2.12.1",
+    "torchvision>=0.27.1",
 ]
